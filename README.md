@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
@@ -24,3 +25,11 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+=======
+# OLED_Shoe
+
+
+This is the git repository for both the app and the hardware code.
+
+Need to edit the readme
+>>>>>>> 115ce9bf296ce9b52629e8e873db347d9dd73396
