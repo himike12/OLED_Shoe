@@ -11,9 +11,9 @@
 <ion-content padding>
 
   <h3>Select which image you would like to have displayed on your shoe:</h3>
-  <ion-slides class="image-slider">
+  <ion-slides class="image-slider" slidesPerView ="2">
     <ion-slide *ngFor="let img of images">
-      <img src = "assets/imgs/{{img}}" class ="thumb-img">
+      <img src = "assets/imgs/{{img}}" class ="thumb-img" imageViewer>
     </ion-slide>
   </ion-slides>
   <p>
