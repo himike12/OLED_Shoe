@@ -14,8 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-.platform-ios .ios-header {
-    height:calc(56px + 20px);
-    min-height:calc(56px + 20px);
-    padding-top:20px;
+//.platform-ios .ios-header {
+    //height:calc(56px + 20px);
+    //min-height:calc(56px + 20px);
+    //padding-top:20px;
+  //}
+  .toolbar-ios {
+    height: 44px + $cordova-ios-statusbar-padding;
+    padding-top: $cordova-ios-statusbar-padding;
+  }
+  
+  .toolbar-title-ios {
+    padding-top: $cordova-ios-statusbar-padding;
   }
