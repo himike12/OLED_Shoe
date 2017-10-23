@@ -31,8 +31,8 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Homepage', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage },
-      { title: 'Item Details', component: ItemDetailsPage}
+      { title: 'Playlist', component: ListPage },
+      { title: 'Pictures From Camera', component: ItemDetailsPage}
     ];
   }
 
