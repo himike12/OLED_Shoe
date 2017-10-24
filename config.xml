@@ -16,6 +16,8 @@
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="SplashScreenDelay" value="0"/>
+    <preference name="ShowSplashScreen" value="false"/>
 
     <!--
       Change these to configure how the splashscreen displays and fades in/out.
