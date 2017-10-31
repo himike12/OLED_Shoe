@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Camera } from '@ionic-native/camera';
 import { NavController, NavParams } from 'ionic-angular';
 
 
@@ -8,10 +8,16 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'item-details.html'
 })
 export class ItemDetailsPage {
-  selectedItem: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+  base64Image: any;
+  constructor(public camera: Camera) {}
+  accessGallery(){
+    this.camera.getPicture({
+      sourceType: this.camera.PictureSourceType.SAVEDPHOTOALBUM,
+      destinationType: this.camera.DestinationType.DATA_URL
+     }).then((imageData) => {
+       this.base64Image = 'data:image/jpeg;base64,'+imageData;
+      }, (err) => {
+       console.log(err);
+     });
   }
 }
