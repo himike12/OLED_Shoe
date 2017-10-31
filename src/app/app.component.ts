@@ -36,7 +36,6 @@ export class MyApp {
       splash.present();
       //this.splashScreen.hide();
     });
-    //this.initializeApp();
 
     // set our app's pages
     this.pages = [
@@ -45,17 +44,6 @@ export class MyApp {
       { title: 'Pictures From Camera', component: ItemDetailsPage}
     ];
   }
-
-  //initializeApp() {
-    //this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      //this.statusBar.styleDefault();
-      //let splash = modalCtrl.create(SplashPage);
-      //splash.present();
-      //this.splashScreen.hide();
-    //});
-  //}
 
   openPage(page) {
     // close the menu when clicking a link from the menu
