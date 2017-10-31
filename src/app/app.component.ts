@@ -1,10 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { Platform, MenuController, Nav } from 'ionic-angular';
+import { Platform, ModalController, MenuController, Nav } from 'ionic-angular';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
+import { SplashPage } from '../pages/splash/splash';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,9 +25,18 @@ export class MyApp {
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    public modalCtrl: ModalController
   ) {
-    this.initializeApp();
+    this.platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      this.statusBar.styleDefault();
+      let splash = modalCtrl.create(SplashPage);
+      splash.present();
+      //this.splashScreen.hide();
+    });
+    //this.initializeApp();
 
     // set our app's pages
     this.pages = [
@@ -36,14 +46,16 @@ export class MyApp {
     ];
   }
 
-  initializeApp() {
-    this.platform.ready().then(() => {
+  //initializeApp() {
+    //this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      //this.statusBar.styleDefault();
+      //let splash = modalCtrl.create(SplashPage);
+      //splash.present();
       //this.splashScreen.hide();
-    });
-  }
+    //});
+  //}
 
   openPage(page) {
     // close the menu when clicking a link from the menu
