@@ -33,7 +33,7 @@ void setup() {
   // custom services and characteristics can be added as well
   BLESerial.setLocalName("UART");
 
-  Serial.begin(115200);
+  Serial.begin(9600);
   BLESerial.begin();
 }
 
