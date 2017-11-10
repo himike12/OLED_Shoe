@@ -28,6 +28,10 @@
 // create ble serial instance, see pinouts above
 BLESerial BLESerial(BLE_REQ, BLE_RDY, BLE_RST);
 
+// LED status
+bool LEDState = 0;
+
+void LEDChange();
 
 void setup() {
   // custom services and characteristics can be added as well
@@ -35,6 +39,11 @@ void setup() {
 
   Serial.begin(9600);
   BLESerial.begin();
+
+  pinMode(13, OUTPUT);
+  digitalWrite(13, HIGH);       // sets the digital pin 13 on
+  delay(1000);                  // waits for a second
+  digitalWrite(13, LOW);        // sets the digital pin 13 off
 }
 
 void loop() {
@@ -51,6 +60,7 @@ void forward() {
   if (BLESerial && Serial) {
     int byte;
     while ((byte = BLESerial.read()) > 0) {
+      LEDChange(); // Change the state of the LED
       Serial.write((char)byte);
       BLESerial.write((char)byte);
     }
@@ -74,3 +84,16 @@ void spam() {
     delay(1000);
   }
 }
+
+// Change the state of the LED
+void LEDChange() {
+  if(LEDState == 1) {
+    LEDState = 0;
+    digitalWrite(13, LOW);
+  }
+  else {
+    LEDState = 1;
+    digitalWrite(13, HIGH);
+  }
+}
+
