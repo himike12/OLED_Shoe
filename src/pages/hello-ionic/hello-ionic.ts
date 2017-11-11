@@ -7,6 +7,14 @@ import { NavController } from 'ionic-angular';
 })
 export class HelloIonicPage {
   images = [ 'Icon1.jpg', 'Icon2.jpg', 'Icon3.png', 'Icon4.png', 'BioWorldLogo.jpg'];
+  
   constructor(public navCtrl: NavController) {
+  }
+  
+  selectedImages = [];
+  
+  selector(src) {
+    alert(src);
+    this.selectedImages.push(src);
   }
 }
