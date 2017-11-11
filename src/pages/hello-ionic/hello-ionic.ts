@@ -14,7 +14,7 @@ export class HelloIonicPage {
   selectedImages = [];
   
   selector(src) {
-    alert(src + ' added');
+    alert(src + ' added to playlist');
     this.selectedImages.push(src);
   }
 }
