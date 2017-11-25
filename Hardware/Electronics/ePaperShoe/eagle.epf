@@ -381,15 +381,21 @@ UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/SparkFun-Eagle-Libraries
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/SparkFun-Eagle-Libraries-master/SparkFun-Sensors.lbr"
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/SparkFun-Eagle-Libraries-master/SparkFun-Switches.lbr"
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/SparkFun-Eagle-Libraries-master/User-Submitted.lbr"
+UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Infinion/Infineon_By_element14_Batch_1.lbr"
+UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Infinion/infineon.lbr"
+UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Infinion/BSC030P03NS3 G/INF-PG-TDSON-8-1_V.lbr"
+UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Infinion/BSR315P/INF-PG-SC59_L.lbr"
+UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Infinion/BSR315P/INF-PG-SC59_M.lbr"
+UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Infinion/BSR315P/INF-PG-SC59_N.lbr"
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Vishay/Vishay_By_element14_Batch_1.lbr"
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/ON Semiconductor/ON Semiconductor_By_element14_Batch_1.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="322 120 1521 759"
+Loc="2196 116 3395 755"
 State=2
 Number=0
 
 [Desktop]
-Screen="1680 1050"
+Screen="3600 1080"
 Window="Win_1"
