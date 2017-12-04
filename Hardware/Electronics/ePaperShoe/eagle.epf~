@@ -1,6 +1,6 @@
 [Eagle]
-Version="08 04 01"
-Platform="Linux"
+Version="08 04 02"
+Platform="Mac OS X"
 Globals="Globals"
 Desktop="Desktop"
 
@@ -348,6 +348,7 @@ UsedLibraryUrn="urn:adsk.eagle:library:174"
 UsedLibraryUrn="urn:adsk.eagle:library:175"
 UsedLibraryUrn="urn:adsk.eagle:library:176"
 UsedLibraryUrn="urn:adsk.eagle:library:177"
+<<<<<<< HEAD
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Microchip/Microchip_By_element14_Batch_1.lbr"
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/Adafruit-Eagle-Library-master/adafruit.lbr"
 UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/SparkFun-Eagle-Libraries-master/LilyPad-Wearables.lbr"
@@ -386,10 +387,20 @@ UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/ON Semiconductor/ON Semi
 
 [Win_1]
 Type="Control Panel"
-Loc="2099 130 3298 769"
+Loc="322 120 1521 759"
+=======
+
+[Win_1]
+Type="Control Panel"
+Loc="35 90 1234 729"
+>>>>>>> 8f1eccae73ee45db814c3bfa0ce6b85b5166aa86
 State=2
 Number=0
 
 [Desktop]
-Screen="3600 1080"
+<<<<<<< HEAD
+Screen="1680 1050"
+=======
+Screen="1280 800"
+>>>>>>> 8f1eccae73ee45db814c3bfa0ce6b85b5166aa86
 Window="Win_1"
