@@ -10,7 +10,7 @@
 
 <ion-content padding>
 
-  <h2>Selected Picture: </h2>
+  <h2>Selected Pictures: </h2>
   <ion-slides class="image-slider" slidesPerView ="2" loop="true">
     <ion-slide *ngFor="let img of selectedImages">
       <img src = "assets/imgs/{{img}}" class ="thumb-img" imageViewer>
@@ -30,6 +30,5 @@
   <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
   </p>
-  <p>Let us see</p>
 
 </ion-content>
