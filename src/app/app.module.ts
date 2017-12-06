@@ -33,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    SplashPage
+    SplashPage,
+    BluetoothConnectionPage
   ],
   providers: [
     StatusBar,
