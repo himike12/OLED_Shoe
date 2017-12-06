@@ -6,6 +6,7 @@ import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ListPage } from '../pages/list/list';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { SplashPage } from '../pages/splash/splash';
+import { BluetoothConnectionPage } from '../pages/bluetooth-connection/bluetooth-connection';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +19,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = HelloIonicPage;
+  rootPage = BluetoothConnectionPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -34,14 +35,15 @@ export class MyApp {
       this.statusBar.styleDefault();
       let splash = modalCtrl.create(SplashPage);
       splash.present();
-      //this.splashScreen.hide();
+      this.splashScreen.hide();
     });
 
     // set our app's pages
     this.pages = [
-      { title: 'Homepage', component: HelloIonicPage },
+      { title: 'Home Page', component: HelloIonicPage },
       { title: 'Playlist', component: ListPage },
-      { title: 'Pictures From Camera', component: ItemDetailsPage}
+      { title: 'Pictures From Camera', component: ItemDetailsPage},
+      { title: 'Bluetooth Connection', component: BluetoothConnectionPage}
     ];
   }
 
