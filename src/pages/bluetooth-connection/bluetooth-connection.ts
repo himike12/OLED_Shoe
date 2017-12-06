@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
+import { Component, NgZone } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
+import { BLE } from '@ionic-native/ble';
 
 /**
  * Generated class for the BluetoothConnectionPage page.
@@ -14,84 +15,53 @@ import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
   templateUrl: 'bluetooth-connection.html',
 })
 export class BluetoothConnectionPage {
-  unpairedDevices: any;
-  pairedDevices: any;
-  gettingDevices: Boolean;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private bluetoothSerial: BluetoothSerial, private alertCtrl: AlertController) {
-    bluetoothSerial.enable();
+  devices: any[] = [];
+  statusMessage: string;
+  constructor(public navCtrl: NavController, 
+    private toastCtrl: ToastController,
+    private ble: BLE,
+    private ngZone: NgZone) {
+    
+  }
+  ionViewDidEnter() {
+    console.log('ionViewDidEnter');
+    this.scan();
   }
 
-  startScanning() {
-    this.pairedDevices = null;
-    this.unpairedDevices = null;
-    this.gettingDevices = true;
-    this.bluetoothSerial.discoverUnpaired().then((success) => {
-      this.unpairedDevices = success;
-      this.gettingDevices = false;
-      success.forEach(element => {
-        // alert(element.name);
-      });
-    },
-      (err) => {
-        console.log(err);
-      })
+  scan() {
+    this.setStatus('Scanning for Bluetooth LE Devices');
+    this.devices = [];  // clear list
+    this.ble.scan([], 5).subscribe(
+      device => this.onDeviceDiscovered(device), 
+      error => this.scanError(error)
+    );
 
-    this.bluetoothSerial.list().then((success) => {
-      this.pairedDevices = success;
-    },
-      (err) => {
-
-      })
+    setTimeout(this.setStatus.bind(this), 5000, 'Scan complete');
   }
-  success = (data) => alert(data);
-  fail = (error) => alert(error);
 
-  selectDevice(address: any) {
-
-    let alert = this.alertCtrl.create({
-      title: 'Connect',
-      message: 'Do you want to connect with?',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Connect',
-          handler: () => {
-            this.bluetoothSerial.connect(address).subscribe(this.success, this.fail);
-          }
-        }
-      ]
+  onDeviceDiscovered(device) {
+    console.log('Discovered ' + JSON.stringify(device, null, 2));
+    this.ngZone.run(() => {
+      this.devices.push(device);
     });
-    alert.present();
-
   }
 
-  disconnect() {
-    let alert = this.alertCtrl.create({
-      title: 'Disconnect?',
-      message: 'Do you want to Disconnect?',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        },
-        {
-          text: 'Disconnect',
-          handler: () => {
-            this.bluetoothSerial.disconnect();
-          }
-        }
-      ]
+  // If location permission is denied, you'll end up here
+  scanError(error) {
+    this.setStatus('Error ' + error);
+    let toast = this.toastCtrl.create({
+      message: 'Error scanning for Bluetooth low energy devices',
+      position: 'middle',
+      duration: 5000
     });
-    alert.present();
+    toast.present();
+  }
+
+  setStatus(message) {
+    console.log(message);
+    this.ngZone.run(() => {
+      this.statusMessage = message;
+    });
   }
 
 }

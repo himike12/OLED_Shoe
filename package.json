@@ -21,6 +21,7 @@
     "@angular/http": "^4.4.6",
     "@angular/platform-browser": "^4.4.6",
     "@angular/platform-browser-dynamic": "^4.4.6",
+    "@ionic-native/ble": "^4.4.2",
     "@ionic-native/bluetooth-serial": "^4.4.2",
     "@ionic-native/camera": "^4.4.2",
     "@ionic-native/core": "^4.4.2",
@@ -31,6 +32,7 @@
     "app-scripts": "0.0.0",
     "cordova-android": "^6.4.0",
     "cordova-ios": "^4.5.4",
+    "cordova-plugin-ble-central": "^1.1.4",
     "cordova-plugin-bluetooth-serial": "^0.4.7",
     "cordova-plugin-camera": "^2.4.1",
     "cordova-plugin-compat": "^1.2.0",
@@ -66,7 +68,10 @@
         "PHOTOLIBRARY_USAGE_DESCRIPTION": " "
       },
       "cordova-plugin-file": {},
-      "cordova-plugin-bluetooth-serial": {}
+      "cordova-plugin-bluetooth-serial": {},
+      "cordova-plugin-ble-central": {
+        "BLUETOOTH_USAGE_DESCRIPTION": " "
+      }
     },
     "platforms": [
       "android",

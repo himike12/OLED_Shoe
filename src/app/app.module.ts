@@ -12,6 +12,7 @@ import { ListPage } from '../pages/list/list';
 import { SplashPage } from '../pages/splash/splash';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { BLE } from '@ionic-native/ble';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     Camera,
     BluetoothSerial,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BLE
   ]
 })
 export class AppModule {}
