@@ -2,6 +2,7 @@ import { Component, NgZone } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { BLE } from '@ionic-native/ble';
+import { DetailPage } from '../detail/detail';
 
 /**
  * Generated class for the BluetoothConnectionPage page.
@@ -61,6 +62,13 @@ export class BluetoothConnectionPage {
     console.log(message);
     this.ngZone.run(() => {
       this.statusMessage = message;
+    });
+  }
+
+  deviceSelected(device) {
+    console.log(JSON.stringify(device) + ' selected');
+    this.navCtrl.push(DetailPage, {
+      device: device
     });
   }
 

@@ -13,6 +13,7 @@ import { SplashPage } from '../pages/splash/splash';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BLE } from '@ionic-native/ble';
+import { DetailPage } from '../pages/detail/detail';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BLE } from '@ionic-native/ble';
     ItemDetailsPage,
     ListPage,
     SplashPage,
-    BluetoothConnectionPage
+    BluetoothConnectionPage,
+    DetailPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { BLE } from '@ionic-native/ble';
     ItemDetailsPage,
     ListPage,
     SplashPage,
-    BluetoothConnectionPage
+    BluetoothConnectionPage,
+    DetailPage
   ],
   providers: [
     StatusBar,
