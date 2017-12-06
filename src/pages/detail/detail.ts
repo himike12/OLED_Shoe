@@ -30,7 +30,7 @@ export class DetailPage {
 
   onConnected(peripheral) {
     this.ngZone.run(() => {
-      this.setStatus('');
+      this.setStatus('Connected to ' + peripheral.name);
       this.peripheral = peripheral;
     });
   }
@@ -43,8 +43,7 @@ export class DetailPage {
     });
     toast.present();
   }
-
-  // Disconnect peripheral when leaving the page
+  
   disconnect() {
     this.ble.disconnect(this.peripheral.id).then(
       
