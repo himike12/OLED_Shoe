@@ -23,7 +23,7 @@
     <ion-slide *ngFor="let img of images">
       <img src = "assets/imgs/{{img}}" class ="thumb-img" imageViewer>
       <p>
-          <button tappable ion-button color="primary" (click)="selector(img);" sel>Select Image</button>
+          <button ion-button color="primary" (click)="selector(img)">Select Image</button>
       </p>
     </ion-slide>
   </ion-slides>
