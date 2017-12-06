@@ -19,7 +19,6 @@ export class DetailPage {
               private ngZone: NgZone) {
 
     let device = navParams.get('device');
-    alert('Connecting to ' + device.name || device.id);
     this.setStatus('Connecting to ' + device.name || device.id);
 
     this.ble.connect(device.id).subscribe(
@@ -50,7 +49,6 @@ export class DetailPage {
     this.ble.disconnect(this.peripheral.id).then(
       
     )
-    alert('Disconnected ' + JSON.stringify(this.peripheral));
   }
 
   setStatus(message) {
