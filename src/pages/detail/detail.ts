@@ -43,11 +43,12 @@ export class DetailPage {
     });
     toast.present();
   }
-  
+
   disconnect() {
     this.ble.disconnect(this.peripheral.id).then(
       
     )
+    this.setStatus('Disconnected from ' + this.peripheral.name);
   }
 
   setStatus(message) {
