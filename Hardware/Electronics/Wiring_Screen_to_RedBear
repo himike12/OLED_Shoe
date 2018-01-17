@@ -1,0 +1,8 @@
+Wiring for the screen to the Red Bear
+
+SPI_CLK		P0.08
+SPI_MOSI	P0.06
+SPI_CS		P0.04
+SPI_MISO	P0.07
+BUSY_N		P0.21
+RST_N		P0.05
