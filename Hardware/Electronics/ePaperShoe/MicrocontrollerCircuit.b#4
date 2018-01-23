@@ -833,8 +833,8 @@ design rules under a new name.</description>
 <element name="UC_LED" library="microbuilder" package="CHIPLED_0805_NOOUTLINE" value="ORANGE" x="60.96" y="11.43"/>
 <element name="X1" library="Nordic_nRF" package="BT-XTAL_2016_N" value="32MHz" x="36.83" y="13.97"/>
 <element name="X2" library="Nordic_nRF" package="XTAL_3215_N" value="32.768kHz" x="36.83" y="8.89" rot="R90"/>
-<element name="C2" library="microbuilder" package="0805" value="" x="-27.94" y="16.51"/>
-<element name="C1" library="microbuilder" package="1206" value="" x="-36.83" y="15.24"/>
+<element name="C2" library="microbuilder" package="0805" value="" x="-27.94" y="20.32"/>
+<element name="C1" library="microbuilder" package="1206" value="" x="-21.59" y="22.86"/>
 </elements>
 <signals>
 <signal name="GND">

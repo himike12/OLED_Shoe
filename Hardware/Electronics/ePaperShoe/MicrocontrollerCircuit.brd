@@ -776,8 +776,8 @@ design rules under a new name.</description>
 <element name="U$28" library="microbuilder" package="ANT_PCB_2.4GHZ_NRF8001_1.6MM_1OZ" value="" x="10.16" y="20.32" rot="MR180"/>
 <element name="U2" library="Nordic_nRF" package="QFN40P600X600X90-48_N" value="NRF52832" x="44.45" y="10.16" rot="R90"/>
 <element name="UC_LED" library="microbuilder" package="CHIPLED_0805_NOOUTLINE" value="ORANGE" x="60.96" y="11.43"/>
-<element name="X1" library="Nordic_nRF" package="BT-XTAL_2016_N" value="32MHz" x="36.83" y="13.97"/>
-<element name="X2" library="Nordic_nRF" package="XTAL_3215_N" value="32.768kHz" x="36.83" y="8.89" rot="R90"/>
+<element name="X1" library="Nordic_nRF" package="BT-XTAL_2016_N" value="32MHz" x="34.29" y="16.51"/>
+<element name="X2" library="Nordic_nRF" package="XTAL_3215_N" value="32.768kHz" x="36.83" y="10.16" rot="R90"/>
 <element name="C1" library="microbuilder" package="1206" value="12pF" x="-19.05" y="15.24"/>
 <element name="C2" library="microbuilder" package="1206" value="12pF" x="-11.43" y="96.52"/>
 <element name="C3" library="microbuilder" package="1206" value="0.8pF" x="-11.43" y="90.17"/>
@@ -839,9 +839,9 @@ design rules under a new name.</description>
 <wire x1="-10.03" y1="90.17" x2="-10.03" y2="83.82" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.83" y1="96.52" x2="-10.03" y2="90.17" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.45" y1="15.24" x2="-12.83" y2="96.52" width="0" layer="19" extent="1-1"/>
-<wire x1="36.105" y1="14.545" x2="-20.45" y2="15.24" width="0" layer="19" extent="1-1"/>
-<wire x1="37.555" y1="13.395" x2="36.105" y2="14.545" width="0" layer="19" extent="1-1"/>
-<wire x1="42.65" y1="11.96" x2="37.555" y2="13.395" width="0" layer="19" extent="1-1"/>
+<wire x1="33.565" y1="17.085" x2="-20.45" y2="15.24" width="0" layer="19" extent="1-1"/>
+<wire x1="35.015" y1="15.935" x2="33.565" y2="17.085" width="0" layer="19" extent="1-1"/>
+<wire x1="42.65" y1="11.96" x2="35.015" y2="15.935" width="0" layer="19" extent="1-1"/>
 <wire x1="43.85" y1="11.96" x2="42.65" y2="11.96" width="0" layer="19" extent="1-1"/>
 <wire x1="43.85" y1="10.76" x2="43.85" y2="11.96" width="0" layer="19" extent="1-1"/>
 <wire x1="44.45" y1="10.16" x2="43.85" y2="10.76" width="0" layer="19" extent="1-1"/>
@@ -916,15 +916,15 @@ design rules under a new name.</description>
 <contactref element="X1" pad="3"/>
 <contactref element="U2" pad="35"/>
 <contactref element="C1" pad="2"/>
-<wire x1="37.555" y1="14.545" x2="42.65" y2="13.16" width="0" layer="19" extent="1-1"/>
-<wire x1="-17.65" y1="15.24" x2="37.555" y2="14.545" width="0" layer="19" extent="1-1"/>
+<wire x1="35.015" y1="17.085" x2="42.65" y2="13.16" width="0" layer="19" extent="1-1"/>
+<wire x1="-17.65" y1="15.24" x2="35.015" y2="17.085" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="X1">
 <contactref element="X1" pad="1"/>
 <contactref element="U2" pad="34"/>
 <contactref element="C2" pad="2"/>
-<wire x1="36.105" y1="13.395" x2="43.05" y2="13.16" width="0" layer="19" extent="1-1"/>
-<wire x1="-10.03" y1="96.52" x2="36.105" y2="13.395" width="0" layer="19" extent="1-1"/>
+<wire x1="33.565" y1="15.935" x2="43.05" y2="13.16" width="0" layer="19" extent="1-1"/>
+<wire x1="-10.03" y1="96.52" x2="33.565" y2="15.935" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="P0.31">
 <contactref element="U2" pad="43"/>
@@ -1028,8 +1028,8 @@ design rules under a new name.</description>
 <contactref element="X2" pad="1"/>
 <contactref element="U2" pad="2"/>
 <contactref element="C10" pad="1"/>
-<wire x1="36.83" y1="7.64" x2="-12.83" y2="45.72" width="0" layer="19" extent="1-1"/>
-<wire x1="42.65" y1="7.16" x2="36.83" y2="7.64" width="0" layer="19" extent="1-1"/>
+<wire x1="36.83" y1="8.91" x2="-12.83" y2="45.72" width="0" layer="19" extent="1-1"/>
+<wire x1="42.65" y1="7.16" x2="36.83" y2="8.91" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="P0.01">
 <contactref element="U2" pad="11"/>
@@ -1038,8 +1038,8 @@ design rules under a new name.</description>
 <contactref element="X2" pad="2"/>
 <contactref element="U2" pad="3"/>
 <contactref element="C11" pad="1"/>
-<wire x1="36.83" y1="10.14" x2="-12.83" y2="39.37" width="0" layer="19" extent="1-1"/>
-<wire x1="43.05" y1="7.16" x2="36.83" y2="10.14" width="0" layer="19" extent="1-1"/>
+<wire x1="36.83" y1="11.41" x2="-12.83" y2="39.37" width="0" layer="19" extent="1-1"/>
+<wire x1="43.05" y1="7.16" x2="36.83" y2="11.41" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SWDCLK">
 <contactref element="U2" pad="25"/>
