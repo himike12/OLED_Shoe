@@ -100,3 +100,4 @@ class BO_BMA250 {
         int cs2;
 };
 
+#endif
