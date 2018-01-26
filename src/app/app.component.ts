@@ -11,6 +11,10 @@ import { BluetoothConnectionPage } from '../pages/bluetooth-connection/bluetooth
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//For Facebook Login
+import { NativeStorage } from '@ionic-native/native-storage';
+import { LoginPage } from '../pages/login/login';
+import { UserPage } from '../pages/user/user';
 
 @Component({
   templateUrl: 'app.html'
@@ -27,7 +31,12 @@ export class MyApp {
     public menu: MenuController,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+
+    //For Facebook Login.
+    public nativeStorage: NativeStorage
+
+
   ) {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -36,14 +45,39 @@ export class MyApp {
       let splash = modalCtrl.create(SplashPage);
       splash.present();
       this.splashScreen.hide();
+
+
     });
+
+    {
+      platform.ready().then(() => {
+        // Here we will check if the user is already logged in
+        // because we don't want to ask users to log in each time they open the app
+        let env = this;
+        this.nativeStorage.getItem('user')
+          .then(function (data) {
+            // user is previously logged and we have his data
+            // we will let him access the app
+            env.nav.push(ListPage);
+            env.splashScreen.hide();
+          }, function (error) {
+            //we don't have the user data so we will ask him to log in
+            env.nav.push(HelloIonicPage);
+            env.splashScreen.hide();
+          });
+
+        this.statusBar.styleDefault();
+      });
+
+    }
 
     // set our app's pages
     this.pages = [
       { title: 'Home Page', component: HelloIonicPage },
       { title: 'Playlist', component: ListPage },
       { title: 'Pictures From Camera', component: ItemDetailsPage},
-      { title: 'Bluetooth Connection', component: BluetoothConnectionPage}
+      { title: 'Bluetooth Connection', component: BluetoothConnectionPage },
+      { title: 'Login With Facebook', component: LoginPage }
     ];
   }
 

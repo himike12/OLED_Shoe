@@ -15,6 +15,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { BLE } from '@ionic-native/ble';
 import { DetailPage } from '../pages/detail/detail';
 
+//For Facebook Login
+import { Facebook } from '@ionic-native/facebook';
+import { NativeStorage } from '@ionic-native/native-storage';
+import { LoginPage } from '../pages/login/login';
+import { UserPage } from '../pages/user/user';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -23,7 +29,9 @@ import { DetailPage } from '../pages/detail/detail';
     ListPage,
     SplashPage,
     BluetoothConnectionPage,
-    DetailPage
+    DetailPage,
+    LoginPage,
+    UserPage
   ],
   imports: [
     BrowserModule,
@@ -38,14 +46,18 @@ import { DetailPage } from '../pages/detail/detail';
     ListPage,
     SplashPage,
     BluetoothConnectionPage,
-    DetailPage
+    DetailPage,
+    LoginPage,
+    UserPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Camera,
     BluetoothSerial,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    Facebook,
+    NativeStorage,
     BLE
   ]
 })
