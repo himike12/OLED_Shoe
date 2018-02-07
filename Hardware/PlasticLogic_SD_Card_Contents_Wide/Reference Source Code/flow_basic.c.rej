@@ -1,0 +1,10 @@
+diff a/flow_basic.c b/flow_basic.c	(rejected hunks)
+@@ -30,7 +30,7 @@
+ 
+ 	clear_display();
+ 
+-	UC8156_show_image(visa_180x100, FULL_UPDATE, NORMAL_4GL);
++//	UC8156_show_image(visa_180x100, FULL_UPDATE, NORMAL_4GL);
+ }
+ 
+ 

@@ -387,7 +387,7 @@ UsedLibrary="/home/michael/ownCloud/UTA/OwnEagleLibrary/microbuilder/microbuilde
 
 [Win_1]
 Type="Control Panel"
-Loc="2156 152 3355 791"
+Loc="57 75 1256 714"
 State=2
 Number=0
 
