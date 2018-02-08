@@ -20,15 +20,6 @@ export class LoginPage {
   ) {
     this.fb.browserInit(this.FB_APP_ID, "v2.8");
   }
-  
-  test() {
-    let alert = this.alertCtrl.create({
-      title: 'Low battery',
-      subTitle: '10% of battery remaining',
-      buttons: ['Dismiss']
-    });
-    alert.present();
-  }
 
   doFbLogin() {
     let permissions = new Array<string>();
