@@ -14,6 +14,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BLE } from '@ionic-native/ble';
 import { DetailPage } from '../pages/detail/detail';
+import { Pro } from '@ionic/pro';
+import { Injectable, Injector } from '@angular/core';
 
 //For Facebook Login
 import { Facebook } from '@ionic-native/facebook';
@@ -58,7 +60,34 @@ import { UserPage } from '../pages/user/user';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Facebook,
     NativeStorage,
-    BLE
+    BLE,
+    IonicErrorHandler,
+    [{ provide: ErrorHandler, useClass: MyErrorHandler }]
   ]
 })
+
+const IonicPro = Pro.init('fc0a92be', {
+  appVersion: "0.0.1"
+});
+
+@Injectable()
+export class MyErrorHandler implements ErrorHandler {
+  ionicErrorHandler: IonicErrorHandler;
+
+  constructor(injector: Injector) {
+    try {
+      this.ionicErrorHandler = injector.get(IonicErrorHandler);
+    } catch(e) {
+      // Unable to get the IonicErrorHandler provider, ensure 
+      // IonicErrorHandler has been added to the providers list below
+    }
+  }
+
+  handleError(err: any): void {
+    IonicPro.monitoring.handleNewError(err);
+    // Remove this if you want to disable Ionic's auto exception handling
+    // in development mode.
+    this.ionicErrorHandler && this.ionicErrorHandler.handleError(err);
+  }
+}
 export class AppModule {}
