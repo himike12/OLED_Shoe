@@ -1,4 +1,4 @@
-﻿<!--<ion-content class="login-content" padding>
+﻿<ion-content class="login-content" padding>
     <ion-row class="top-row">
         <ion-col>
             <h1 class="label-logo">Login With Facebook</h1>
@@ -10,33 +10,4 @@
             <button ion-button block (click)="doFbLogin()">Facebook Login</button>
         </ion-col>
     </ion-row>
-</ion-content>-->
-
-<ion-header>
-    <ion-navbar>
-      <ion-title>Home</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding>
-    <div *ngIf="isLoggedIn; else facebookLogin">
-      <h2>Hi, {{users.name}} ({{users.email}})</h2>
-      <p>
-        Gender: {{users.gender}}
-      </p>
-      <p>
-        <img src="{{users.picture.data.url}}" width="100" alt="{{users.name}}" />
-      </p>
-      <p>
-        <button ion-button icon-right (click)="logout()">
-          Logout
-        </button>
-      </p>
-    </div>
-    <ng-template #facebookLogin>
-      <button ion-button icon-right (click)="login()">
-        Login with
-        <ion-icon name="logo-facebook"></ion-icon>
-      </button>
-    </ng-template>
-  </ion-content>
+</ion-content>
