@@ -11,23 +11,59 @@ import { AlertController } from 'ionic-angular';
 })
 export class LoginPage {
   FB_APP_ID: number = 181705319094673;
+  isLoggedIn:boolean = false;
+  users: any;
 
   constructor(
     private alertCtrl : AlertController,
     public navCtrl: NavController,
-    public fb: Facebook,
+    private fb: Facebook,
     public nativeStorage: NativeStorage
   ) {
-    this.fb.browserInit(this.FB_APP_ID, "v2.8");
+    fb.getLoginStatus()
+    .then(res => {
+      console.log(res.status);
+      if(res.status === "connect") {
+        this.isLoggedIn = true;
+      } else {
+        this.isLoggedIn = false;
+      }
+    })
+    .catch(e => console.log(e));
+    //this.fb.browserInit(this.FB_APP_ID, "v2.8");
   }
 
-  doFbLogin() {
-    let alert = this.alertCtrl.create({
-      title: 'Low battery',
-      subTitle: '10% of battery remaining',
-      buttons: ['Dismiss']
-    });
-    alert.present();
+  login() {
+    this.fb.login(['public_profile', 'user_friends', 'email'])
+      .then(res => {
+        if(res.status === "connected") {
+          this.isLoggedIn = true;
+          this.getUserDetail(res.authResponse.userID);
+        } else {
+          this.isLoggedIn = false;
+        }
+      })
+      .catch(e => console.log('Error logging into Facebook', e));
+  }
+
+  logout() {
+    this.fb.logout()
+      .then( res => this.isLoggedIn = false)
+      .catch(e => console.log('Error logout from Facebook', e));
+  }
+
+  getUserDetail(userid) {
+    this.fb.api("/"+userid+"/?fields=id,email,name,picture,gender",["public_profile"])
+      .then(res => {
+        console.log(res);
+        this.users = res;
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
+  
+  /*doFbLogin() {
     let permissions = new Array<string>();
     let nav = this.navCtrl;
 
@@ -59,5 +95,5 @@ export class LoginPage {
       }, (error) => {
         console.log(error);
       });
-  }
+  }*/
 }
