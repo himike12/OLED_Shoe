@@ -3,7 +3,6 @@ import { Facebook } from '@ionic-native/facebook';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { NavController } from 'ionic-angular';
 import { UserPage } from '../user/user';
-import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-login',
@@ -11,9 +10,8 @@ import { AlertController } from 'ionic-angular';
 })
 export class LoginPage {
   FB_APP_ID: number = 181705319094673;
-
+  
   constructor(
-    private alertCtrl : AlertController,
     public navCtrl: NavController,
     public fb: Facebook,
     public nativeStorage: NativeStorage
