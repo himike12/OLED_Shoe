@@ -22,6 +22,12 @@ export class LoginPage {
   }
 
   doFbLogin() {
+    let alert = this.alertCtrl.create({
+      title: 'Low battery',
+      subTitle: '10% of battery remaining',
+      buttons: ['Dismiss']
+    });
+    alert.present();
     let permissions = new Array<string>();
     let nav = this.navCtrl;
 
