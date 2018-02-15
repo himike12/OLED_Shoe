@@ -8,7 +8,7 @@
    https://www.crowdsupply.com/robert-poser/paperino 
    Created by Robert Poser, Oct 3rd 2017, Dresden/Germany
 **************************************************************************************** */
-#include <Adafruit_GFX.h>
+#include "Adafruit_GFX.h"
 #include "PL_microEPD.h"
 
 #define EPD_RST     A4      // Please align with your individual wiring
@@ -37,7 +37,7 @@ void setup() {
         }   
     }
     display.update();                       // Trigger a full image update
-    //delay(1000);
+    delay(1000);
     
     display.clear();                        // Clear the image buffer
     display.setCursor(1,1);                 // Set Cursor start position 
@@ -50,11 +50,11 @@ void setup() {
     display.setTextSize(9);
     display.println("9");
     display.update();                       
-    //delay(1000);
+    delay(1000);
 
     display.invert();                       // Invert the display content
     display.update();
-    //delay(1000);
+    delay(1000);
 
     display.clear();
     display.drawRect(5, 5, 50, 50, EPD_BLACK);          // Draw a rectangle
@@ -64,7 +64,7 @@ void setup() {
     display.drawCircle(100, 35, 8, EPD_BLACK);
     display.drawCircle(100, 35, 4, EPD_BLACK);
     display.update();
-    //delay(1000);
+    delay(1000);
 
     display.clear();
     display.setTextSize(2);

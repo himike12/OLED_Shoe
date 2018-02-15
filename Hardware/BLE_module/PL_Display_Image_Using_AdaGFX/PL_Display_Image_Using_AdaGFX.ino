@@ -166,17 +166,30 @@ void setup() {
     // Paperino ePaper initialisation and refresh screen 
     display.begin();
 
+    display.println("First Image");// Write message into memory buffer
+    display.update();               // Trigger a full image update
+  
+    delay(500);  
+    display.clear();                        // Clear the image buffer
+
     // Draw the bitmap:
     // drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
-    display.drawBitmap(0, 0, myBitmap, 64, 64, 0x03);
+    display.drawBitmap(0, 0, myBitmap, 148, 70, EPD_LGRAY);
     // Trigger a full image update
     display.update();
 
-    delay(2000);
+    delay(1000);
+    display.clear(); 
+
+    display.println("Second Image");// Write message into memory buffer
+    display.update();               // Trigger a full image update
+    display.clear();                        // Clear the image buffer
+
+    delay(500);
 
     // Draw the bitmap:
     // drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
-    display.drawBitmap(0, 0, Avatar, 64, 64, 0x03);
+    display.drawBitmap(0, 0, Avatar, 148, 70, EPD_BLACK);
     // Trigger a full image update
     display.update();
     
