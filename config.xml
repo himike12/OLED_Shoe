@@ -96,9 +96,9 @@
     <plugin name="cordova-plugin-ble-central" spec="^1.1.4">
         <variable name="BLUETOOTH_USAGE_DESCRIPTION" value=" " />
     </plugin>
+    <plugin name="cordova-plugin-nativestorage" spec="^2.2.2" />
     <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
         <variable name="APP_ID" value="181705319094673" />
         <variable name="APP_NAME" value="OLED Shoe" />
     </plugin>
-    <plugin name="cordova-plugin-nativestorage" spec="^2.2.2" />
 </widget>
