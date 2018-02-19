@@ -78,11 +78,11 @@
       "cordova-plugin-ble-central": {
         "BLUETOOTH_USAGE_DESCRIPTION": " "
       },
+      "cordova-plugin-nativestorage": {},
       "cordova-plugin-facebook4": {
         "APP_ID": "181705319094673",
         "APP_NAME": "OLED Shoe"
-      },
-      "cordova-plugin-nativestorage": {}
+      }
     },
     "platforms": [
       "android",
