@@ -3,6 +3,7 @@ import { Facebook } from '@ionic-native/facebook';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { NavController } from 'ionic-angular';
 import { UserPage } from '../user/user';
+import { AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-login',
@@ -14,7 +15,8 @@ export class LoginPage {
   constructor(
     public navCtrl: NavController,
     public fb: Facebook,
-    public nativeStorage: NativeStorage
+    public nativeStorage: NativeStorage,
+    private alertCtrl: AlertController
   ) {
     this.fb.browserInit(this.FB_APP_ID, "v2.8");
   }
@@ -49,6 +51,12 @@ export class LoginPage {
               })
           })
       }, (error) => {
+          let alert = this.alertCtrl.create({
+            title: error,
+            subTitle: '10% of battery remaining',
+            buttons: ['Dismiss']
+          });
+          alert.present();
         console.log(error);
       });
   }
