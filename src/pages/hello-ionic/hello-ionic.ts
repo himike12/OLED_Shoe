@@ -14,7 +14,7 @@ export class HelloIonicPage {
   images = [ 'Icon1.jpg', 'Icon2.jpg', 'Icon3.png', 'Icon4.png', 'BioWorldLogo.jpg'];
   
   constructor(private camera: Camera, public navCtrl: NavController, public alertCtrl: AlertController) {
-    initializeApp(FIREBASE_CONFIG);
+    //initializeApp(FIREBASE_CONFIG);
   }
 
   takePhoto() {
