@@ -20,6 +20,7 @@ import { Facebook } from '@ionic-native/facebook';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { LoginPage } from '../pages/login/login';
 import { UserPage } from '../pages/user/user';
+import { FirebaseProvider } from '../providers/firebase/firebase';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { UserPage } from '../pages/user/user';
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Facebook,
     NativeStorage,
-    BLE
+    BLE,
+    FirebaseProvider
   ]
 })
 export class AppModule {}
