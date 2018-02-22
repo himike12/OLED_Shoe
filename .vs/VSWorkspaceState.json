@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\assets",
+    "\\src\\assets\\icon",
+    "\\src\\assets\\imgs",
+    "\\src\\pages",
+    "\\src\\pages\\bluetooth-connection",
+    "\\src\\pages\\detail",
+    "\\src\\pages\\hello-ionic",
+    "\\src\\pages\\list",
+    "\\src\\pages\\splash",
+    "\\src\\theme"
+  ],
+  "SelectedNode": "\\src\\app",
+  "PreviewInSolutionExplorer": false
+}

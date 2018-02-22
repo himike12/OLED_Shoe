@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pictures from Gallery</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+  <ion-content padding>
+    <button ion-button color="primary" (click)="accessGallery()" style="display: block; margin: 0 auto;">Open Gallery</button>
+    <img [src]="base64Image" *ngIf="base64Image" />
+   </ion-content>
+
