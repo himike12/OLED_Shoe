@@ -9,7 +9,7 @@
 #define EPD_CS      10
 PL_microEPD display(EPD_CS, EPD_RST, EPD_BUSY); 
 int i=0;
-int led = 6;
+int led = 13;
 
 // Brightness 60 95 147
 
@@ -575,7 +575,7 @@ void setup() {
     SPI.begin();                            // Bus initialisation, UC8156 supp. max 10Mhz (writing)
     SPI.beginTransaction(SPISettings(500000, MSBFIRST, SPI_MODE0));//and 6.6Mhz (reading)
 
-    pinMode(led, OUTPUT);   
+    pinMode(led, OUTPUT);  
 
     // Mark the begining of the program by flashing an LED
     digitalWrite(led, HIGH);

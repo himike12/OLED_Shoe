@@ -41,7 +41,7 @@ void setup() {
 
     // Display version number
     display.setCursor(1,1);                 // Set Cursor start position 
-    display.println("0.04");
+    display.println("0.05");
     display.println(BLE_ATTRIBUTE_MAX_VALUE_LENGTH);
 
     // Draw the bitmap:

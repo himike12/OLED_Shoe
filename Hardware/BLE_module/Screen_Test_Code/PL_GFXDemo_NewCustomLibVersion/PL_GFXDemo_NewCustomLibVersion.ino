@@ -1,3 +1,4 @@
+
 /* ****************************************************************************************
    Example #2: Here we see some more Graphic/GFX basics, like changing the font size, 
    inverting the screen and drawing some circles and rectangles. 
@@ -16,7 +17,7 @@
 #define EPD_CS      10
 PL_microEPD display(EPD_CS, EPD_RST, EPD_BUSY); 
 int i=0;
-int led = 6;
+int led = 13;
 
 void setup() {
     
