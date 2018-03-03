@@ -4,7 +4,7 @@
 #include <BLEPeripheral.h>
 #include "BLESerial.h"
 
-#define VERSION_NUMBER 0.1
+#define VERSION_NUMBER 1.0
 
 #define EPD_RST     A4      // Please align with your individual wiring
 #define EPD_BUSY    A5      // Please align with your individual wiring
@@ -50,6 +50,7 @@ void setup() {
     display.setCursor(1,1);                 // Set Cursor start position 
     display.println(VERSION_NUMBER);
 
+    delay(500);
     // Draw the bitmap:
     // drawBitmap(x position, y position, bitmap data, bitmap width, bitmap height, color)
     display.drawBitmap(0, 0, BioworldLogo, 312, 74, EPD_BLACK);
@@ -159,6 +160,11 @@ void displayProgrammedImage(char imageNumChar) {
       display.drawBitmap(0, 0, A380LGray, 312, 74, EPD_LGRAY);
       display.drawBitmap(0, 0, A380DGray, 312, 74, EPD_DGRAY);
       display.drawBitmap(0, 0, A380Black, 312, 74, EPD_BLACK);
+      display.update();
+      break;
+    case '4':
+      display.clear();
+      display.drawBitmap(0, 0, BioworldLogo, 312, 74, EPD_BLACK);
       display.update();
       break;
     default:
