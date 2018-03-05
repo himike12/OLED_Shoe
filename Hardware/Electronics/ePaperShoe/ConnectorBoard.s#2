@@ -528,6 +528,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="66.04" y="116.84" size="1.778" layer="91">This connector (X2) connects</text>
 <text x="142.24" y="114.3" size="1.778" layer="91">to the microcontroller</text>
 <text x="142.24" y="116.84" size="1.778" layer="91">This connector (X1) connects</text>
+<text x="142.24" y="106.68" size="1.778" layer="91">Pins 2, 3, 4 and 8 on X1</text>
+<text x="142.24" y="104.14" size="1.778" layer="91">connect to ground</text>
 </plain>
 <instances>
 <instance part="X1" gate="-1" x="129.54" y="134.62"/>
@@ -598,6 +600,27 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="111.76" y1="71.12" x2="127" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="X1" gate="-25" pin="1"/>
+<pinref part="X2" gate="-2" pin="1"/>
+<wire x1="111.76" y1="73.66" x2="127" y2="73.66" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="X1" gate="-24" pin="1"/>
+<pinref part="X2" gate="-3" pin="1"/>
+<wire x1="111.76" y1="76.2" x2="127" y2="76.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="X1" gate="-23" pin="1"/>
+<pinref part="X2" gate="-4" pin="1"/>
+<wire x1="111.76" y1="78.74" x2="127" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="X1" gate="-22" pin="1"/>
@@ -617,6 +640,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="X1" gate="-20" pin="1"/>
 <pinref part="X2" gate="-7" pin="1"/>
 <wire x1="111.76" y1="86.36" x2="127" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="X1" gate="-19" pin="1"/>
+<pinref part="X2" gate="-8" pin="1"/>
+<wire x1="111.76" y1="88.9" x2="127" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="X1" gate="-18" pin="1"/>
+<pinref part="X2" gate="-9" pin="1"/>
+<wire x1="111.76" y1="91.44" x2="127" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -682,6 +719,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="111.76" y1="114.3" x2="127" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="X1" gate="-8" pin="1"/>
+<pinref part="X2" gate="-19" pin="1"/>
+<wire x1="111.76" y1="116.84" x2="127" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+</net>
 <net name="N$20" class="0">
 <segment>
 <pinref part="X1" gate="-7" pin="1"/>
@@ -703,74 +747,32 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="111.76" y1="124.46" x2="127" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="X1" gate="-4" pin="1"/>
+<pinref part="X2" gate="-23" pin="1"/>
+<wire x1="111.76" y1="127" x2="127" y2="127" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="X1" gate="-3" pin="1"/>
+<pinref part="X2" gate="-24" pin="1"/>
+<wire x1="111.76" y1="129.54" x2="127" y2="129.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="X1" gate="-2" pin="1"/>
+<pinref part="X2" gate="-25" pin="1"/>
+<wire x1="111.76" y1="132.08" x2="127" y2="132.08" width="0.1524" layer="91"/>
+</segment>
+</net>
 <net name="N$26" class="0">
 <segment>
 <pinref part="X1" gate="-1" pin="1"/>
 <pinref part="X2" gate="-26" pin="1"/>
 <wire x1="111.76" y1="134.62" x2="127" y2="134.62" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="X2" gate="-25" pin="1"/>
-<pinref part="X1" gate="-2" pin="1"/>
-<wire x1="111.76" y1="132.08" x2="127" y2="132.08" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="X2" gate="-24" pin="1"/>
-<pinref part="X1" gate="-3" pin="1"/>
-<wire x1="111.76" y1="129.54" x2="127" y2="129.54" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="X2" gate="-23" pin="1"/>
-<pinref part="X1" gate="-4" pin="1"/>
-<wire x1="111.76" y1="127" x2="127" y2="127" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="X2" gate="-19" pin="1"/>
-<pinref part="X1" gate="-8" pin="1"/>
-<wire x1="111.76" y1="116.84" x2="127" y2="116.84" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="X2" gate="-9" pin="1"/>
-<pinref part="X1" gate="-18" pin="1"/>
-<wire x1="111.76" y1="91.44" x2="127" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="X2" gate="-4" pin="1"/>
-<pinref part="X1" gate="-23" pin="1"/>
-<wire x1="111.76" y1="78.74" x2="127" y2="78.74" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="X2" gate="-3" pin="1"/>
-<pinref part="X1" gate="-24" pin="1"/>
-<wire x1="111.76" y1="76.2" x2="127" y2="76.2" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="X2" gate="-2" pin="1"/>
-<pinref part="X1" gate="-25" pin="1"/>
-<wire x1="111.76" y1="73.66" x2="127" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="X2" gate="-8" pin="1"/>
-<pinref part="X1" gate="-19" pin="1"/>
-<wire x1="111.76" y1="88.9" x2="127" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
