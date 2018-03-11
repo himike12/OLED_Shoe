@@ -16,7 +16,7 @@
 #define EPD_CS      10
 PL_microEPD display(EPD_CS, EPD_RST, EPD_BUSY); 
 int i=0;
-int led = 9;
+int led = 6;
 
 void setup() {
     
