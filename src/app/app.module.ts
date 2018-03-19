@@ -87,12 +87,9 @@ export class MyErrorHandler implements ErrorHandler {
     Facebook,
     NativeStorage,
     BLE,
-<<<<<<< HEAD
     IonicErrorHandler,
-    [{ provide: ErrorHandler, useClass: MyErrorHandler }]
-=======
+    { provide: ErrorHandler, useClass: MyErrorHandler },
     FirebaseProvider
->>>>>>> 3d6148c940b6a333e60671e433da42c347f1d8e8
-  ]
+  ],
 })
 export class AppModule {}
