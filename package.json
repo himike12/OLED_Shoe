@@ -85,13 +85,8 @@
       "cordova-plugin-facebook4": {
         "APP_ID": "181705319094673",
         "APP_NAME": "OLED Shoe"
-<<<<<<< HEAD
-      }
-=======
       },
-      "cordova-plugin-nativestorage": {},
-      "cordova-plugin-firebase": {}
->>>>>>> 3d6148c940b6a333e60671e433da42c347f1d8e8
+      "cordova-plugin-firebase": {
     },
     "platforms": [
       "android",
@@ -99,4 +94,5 @@
       "browser"
     ]
   }
+}
 }
