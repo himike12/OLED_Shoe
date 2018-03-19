@@ -22,6 +22,7 @@ import { Facebook } from '@ionic-native/facebook';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { LoginPage } from '../pages/login/login';
 import { UserPage } from '../pages/user/user';
+import { FirebaseProvider } from '../providers/firebase/firebase';
 
 const IonicPro = Pro.init('fc0a92be', {
   appVersion: "0.0.1"
@@ -86,8 +87,12 @@ export class MyErrorHandler implements ErrorHandler {
     Facebook,
     NativeStorage,
     BLE,
+<<<<<<< HEAD
     IonicErrorHandler,
     [{ provide: ErrorHandler, useClass: MyErrorHandler }]
+=======
+    FirebaseProvider
+>>>>>>> 3d6148c940b6a333e60671e433da42c347f1d8e8
   ]
 })
 export class AppModule {}

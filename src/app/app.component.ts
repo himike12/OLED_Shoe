@@ -16,6 +16,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { LoginPage } from '../pages/login/login';
 import { UserPage } from '../pages/user/user';
 
+import * as firebase from 'firebase';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -35,8 +37,6 @@ export class MyApp {
 
     //For Facebook Login.
     public nativeStorage: NativeStorage
-
-
   ) {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -46,6 +46,16 @@ export class MyApp {
       splash.present();
       this.splashScreen.hide();
 
+      const FIREBASE_CONFIG = {
+        apiKey: "AIzaSyC-es4FWbYBL0Drcu7xFuR3n6d0SnUH3rA",
+        authDomain: "shoe-7855a.firebaseapp.com",
+        databaseURL: "https://shoe-7855a.firebaseio.com",
+        projectId: "shoe-7855a",
+        storageBucket: "shoe-7855a.appspot.com",
+        messagingSenderId: "830334382371"
+      };
+
+      var app = firebase.initializeApp(FIREBASE_CONFIG);
 
     });
 

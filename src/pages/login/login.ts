@@ -14,7 +14,7 @@ export class LoginPage {
   
   constructor(
     public navCtrl: NavController,
-    public fb: Facebook,
+    private fb: Facebook,
     public nativeStorage: NativeStorage,
     private alertCtrl: AlertController
   ) {
@@ -53,7 +53,7 @@ export class LoginPage {
       }, (error) => {
           let alert = this.alertCtrl.create({
             title: error,
-            subTitle: '10% of battery remaining',
+            subTitle: error,
             buttons: ['Dismiss']
           });
           alert.present();
