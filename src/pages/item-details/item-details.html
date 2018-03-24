@@ -11,5 +11,6 @@
   <ion-content padding>
     <button ion-button color="primary" (click)="accessGallery()" style="display: block; margin: 0 auto;">Open Gallery</button>
     <img [src]="base64Image" *ngIf="base64Image" />
+    <button ion-button (click)="upload()" *ngIf="captureDataUrl">Upload Image</button>
    </ion-content>
 
