@@ -92,6 +92,10 @@
         "ios",
         "browser"
       ]
-    }
+    },
+    "platforms": [
+      "ios",
+      "browser"
+    ]
   }
 }

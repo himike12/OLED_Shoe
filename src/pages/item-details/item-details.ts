@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Camera } from '@ionic-native/camera';
 import { NavController, NavParams, AlertController } from 'ionic-angular';
+import 'rxjs';
+import * as firebase from 'firebase';
 @Component({
   selector: 'page-item-details',
   templateUrl: 'item-details.html'
