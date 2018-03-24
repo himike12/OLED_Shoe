@@ -4,11 +4,10 @@ import { NavController, AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from "@ionic-native/camera"; 
 import 'rxjs';
 import * as firebase from 'firebase';
-import * as 
 
 @Component({
   selector: 'page-hello-ionic',
-  templateUrl: 'hello-ionic.html'
+  templateUrl: 'hello-ionic.html',
 })
 
 export class HelloIonicPage {
