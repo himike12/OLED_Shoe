@@ -2,6 +2,8 @@ import { Component, NgZone } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { BLE } from '@ionic-native/ble';
+import { AlertController } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-detail',
@@ -16,7 +18,8 @@ export class DetailPage {
               public navParams: NavParams, 
               private ble: BLE,
               private toastCtrl: ToastController,
-              private ngZone: NgZone) {
+              private ngZone: NgZone,
+            private alertCtrl: AlertController) {
 
     let device = navParams.get('device');
     this.setStatus('Connecting to ' + device.name || device.id);
@@ -49,6 +52,14 @@ export class DetailPage {
       
     )
     this.setStatus('Disconnected from ' + this.peripheral.name);
+  }
+  alert(){
+    let alert = this.alertCtrl.create({
+      title: this.peripheral.id,
+      subTitle: this.peripheral.services
+
+    });
+    alert.present();
   }
 
   setStatus(message) {
