@@ -56,7 +56,8 @@ export class DetailPage {
   alert(){
     let alert = this.alertCtrl.create({
       title: this.peripheral.id,
-      subTitle: this.peripheral.services
+      subTitle: this.peripheral.services[1]
+
 
     });
     alert.present();
