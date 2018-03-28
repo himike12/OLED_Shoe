@@ -4,6 +4,8 @@ import { ToastController } from 'ionic-angular';
 import { BLE } from '@ionic-native/ble';
 import { AlertController } from 'ionic-angular';
 
+const BLEUART_SERVICE = '6E400001-B5A3-F393-­E0A9-­E50E24DCCA9E';
+const BLEUART_CHARACTERISTIC = '0x0002';
 
 @Component({
   selector: 'page-detail',
@@ -54,15 +56,13 @@ export class DetailPage {
     this.setStatus('Disconnected from ' + this.peripheral.name);
   }
   alert(){
-    let alert = this.alertCtrl.create({
-      title: this.peripheral.id,
-      subTitle: JSON.stringify(this.peripheral.characteristics)
-
-
-    });
-    alert.present();
+    var string = 'hello';
+    var array = new Uint8Array(string.length);
+    for (var i = 0, l = string.length; i < l; i++) {
+      array[i] = string.charCodeAt(i);
+   }
+    this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, array.buffer);
   }
-
   setStatus(message) {
     console.log(message);
     this.ngZone.run(() => {
