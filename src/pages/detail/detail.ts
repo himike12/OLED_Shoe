@@ -56,12 +56,8 @@ export class DetailPage {
     this.setStatus('Disconnected from ' + this.peripheral.name);
   }
   alert(){
-    var string = '2hello';
-    var array = new Uint8Array(string.length);
-    for (var i = 0, l = string.length; i < l; i++) {
-      array[i] = string.charCodeAt(i);
-   }
-    this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, array.buffer);
+    var buffer = this.stringToBytes('2hello');
+    this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, buffer);
   }
   setStatus(message) {
     console.log(message);
@@ -69,5 +65,12 @@ export class DetailPage {
       this.statusMessage = message;
     });
   }
+  stringToBytes(string) {
+    var array = new Uint8Array(string.length);
+    for (var i = 0, l = string.length; i < l; i++) {
+        array[i] = string.charCodeAt(i);
+     }
+     return array.buffer;
+ }
 
 }
