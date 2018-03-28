@@ -56,7 +56,7 @@ export class DetailPage {
     this.setStatus('Disconnected from ' + this.peripheral.name);
   }
   alert(){
-    var string = 'hello';
+    var string = '2hello';
     var array = new Uint8Array(string.length);
     for (var i = 0, l = string.length; i < l; i++) {
       array[i] = string.charCodeAt(i);
