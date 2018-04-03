@@ -5,22 +5,33 @@ import { Camera, CameraOptions } from "@ionic-native/camera";
 import 'rxjs';
 import * as firebase from 'firebase';
 
+//import { AngularFireModule } from 'angularfire2';
+//import { AngularFireDatabase } from 'angularfire2/database';
+//import { FirebaseListObservable } from 'angularfire2/database';
+import { NgZone } from '@angular/core';
+
 @Component({
   selector: 'page-hello-ionic',
-  templateUrl: 'hello-ionic.html',
+  templateUrl: 'hello-ionic.html'
 })
 
 export class HelloIonicPage {
   images = [ 'Icon1.jpg', 'Icon2.jpg', 'Icon3.png', 'Icon4.png', 'BioWorldLogo.jpg'];
-  
+  imageURL: string;
   captureDataUrl: string;
   alertCtrl: AlertController;
   captureImageUrl: string;
+  imgsource: any;
+  items=[];
+  //imgs=[];
   
-  constructor(public camera: Camera, public navCtrl: NavController, alertCtrl: AlertController) {
-    //firebase.initializeApp(FIREBASE_CONFIG);
+  firedbRef: firebase.database.Reference = firebase.database().ref('/images');
+  
+  
+  constructor(public camera: Camera, public navCtrl: NavController, alertCtrl: AlertController, public zone: NgZone) {
     this.alertCtrl = alertCtrl;
     this.camera = camera;
+    
   }
 
 
@@ -46,17 +57,32 @@ export class HelloIonicPage {
   }
 
   upload() {
+  
+    //const firedbRef: firebase.database.Reference = firebase.database.list('/images');
+  
     let storageRef = firebase.storage().ref();
 
     // Create a timestamp as filename
     const filename = 'images/' + Math.floor(Date.now() / 1000) + '.jpeg';
-
+    
+    
+    
     // Create a reference to 'images/todays-date.jpeg'
     const imageRef = storageRef.child(filename);
 
     imageRef.putString(this.captureDataUrl, firebase.storage.StringFormat.DATA_URL).then((snapshot)=> {
+      //this.firedbRef.set(filename);
+      this.firedbRef.push(filename);
+    
       // Show an alert when image is successfully uploaded
       this.showSuccesfulUploadAlert();
+
+      imageRef.getDownloadURL().then(function (url) {
+        this.imageURL = url;
+      }).then((imageURL) => {
+        const link = firebase.storage().ref(this.imageURL);
+        link.putString(this.imageURL, 'image-url');
+      });
     });
   }
   
@@ -76,8 +102,6 @@ export class HelloIonicPage {
   selectedImages = [];
   
   selector(img) {
-    
-
 
     this.selectedImages.push(img);
     //this.ImageData = img;
@@ -88,9 +112,35 @@ export class HelloIonicPage {
   uploadImageToPlaylist(img) {
       
   }
-
-
-  getDataUri(url, callback) {
-
+  
+  display() {
+    //let storageRef = firebase.storage().ref();
+    //storageRef.child('images/1522731583.jpeg').getDownloadURL().then((url) => {
+     // this.zone.run(() => {
+    //    this.imgsource = url;
+    //    console.log(url);
+    //   })
+    //})
+    
+    let storageRef = firebase.storage().ref();
+    
+    this.firedbRef.on("value", itemSnapshot => {
+        this.items = [];
+        //this.imgs = [];
+        itemSnapshot.forEach((itemSnap) => {
+            
+            storageRef.child(itemSnap.val()).getDownloadURL().then((url) => {
+                this.zone.run(() => {
+                    const link = url;
+                    this.items.push(link);
+                })
+            })
+            
+            //this.items.push(itemSnap.val());
+        }); 
+        console.log(this.items);
+    });
+    
   }
+  
 }
