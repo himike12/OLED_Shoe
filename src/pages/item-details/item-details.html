@@ -8,9 +8,9 @@
 </ion-header>
 
 
-  <ion-content padding>
-    <button ion-button color="primary" (click)="accessGallery()" style="display: block; margin: 0 auto;">Open Gallery</button>
-    <img [src]="base64Image" *ngIf="base64Image" />
-    <button ion-button (click)="upload()" *ngIf="base64Image">Upload Image</button>
-   </ion-content>
-
+ <ion-content padding>
+   <button ion-button color="primary" (click)="accessGallery()" style="display: block; margin: 0 auto;">Open Gallery</button>
+   <img [src]="base64Image" *ngIf="base64Image" />
+   <button ion-button (click)="upload()" *ngIf="base64Image">Upload Image</button>
+   
+ </ion-content>
