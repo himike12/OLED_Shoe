@@ -23,9 +23,10 @@ export class HelloIonicPage {
   captureImageUrl: string;
   imgsource: any;
   items=[];
-  //imgs=[];
+  playlist = [];
   
   firedbRef: firebase.database.Reference = firebase.database().ref('/images');
+  firedbPlay: firebase.database.Reference = firebase.database().ref('/playlist');
   
   
   constructor(public camera: Camera, public navCtrl: NavController, alertCtrl: AlertController, public zone: NgZone) {
@@ -110,23 +111,29 @@ export class HelloIonicPage {
   }
 
   uploadImageToPlaylist(img) {
-      
+    this.firedbPlay.push(img);
+  }
+  
+  displayPlaylist() {
+    
+    this.firedbPlay.on("value", itemSnapshot => {
+        this.playlist = [];
+        itemSnapshot.forEach((itemSnap) => {
+            this.playlist.push(itemSnap.val());
+            
+            return false;
+        }); 
+        console.log(this.playlist);
+    });
+  
   }
   
   display() {
-    //let storageRef = firebase.storage().ref();
-    //storageRef.child('images/1522731583.jpeg').getDownloadURL().then((url) => {
-     // this.zone.run(() => {
-    //    this.imgsource = url;
-    //    console.log(url);
-    //   })
-    //})
     
     let storageRef = firebase.storage().ref();
     
     this.firedbRef.on("value", itemSnapshot => {
         this.items = [];
-        //this.imgs = [];
         itemSnapshot.forEach((itemSnap) => {
             
             storageRef.child(itemSnap.val()).getDownloadURL().then((url) => {
@@ -135,8 +142,7 @@ export class HelloIonicPage {
                     this.items.push(link);
                 })
             })
-            
-            //this.items.push(itemSnap.val());
+            return false;
         }); 
         console.log(this.items);
     });
