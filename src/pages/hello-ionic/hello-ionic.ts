@@ -135,7 +135,7 @@ export class HelloIonicPage {
                     this.items.push(link);
                 })
             })
-            
+            return false;
             //this.items.push(itemSnap.val());
         }); 
         console.log(this.items);
