@@ -56,8 +56,8 @@ export class DetailPage {
     this.setStatus('Disconnected from ' + this.peripheral.name);
   }
   alert(){
-    var buffer = this.stringToBytes('2hello');
-    var data = new Uint8Array(1);
+    let buffer = this.stringToBytes('2hello');
+    let data = new Uint8Array(1);
     data[0] = 1;
     this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, data.buffer).then(
       () => this.setStatus('Sent 2hello to the BLEUART'),
@@ -71,8 +71,8 @@ export class DetailPage {
     });
   }
   stringToBytes(string) {
-    var array = new Uint8Array(string.length);
-    for (var i = 0, l = string.length; i < l; i++) {
+    let array = new Uint8Array(string.length);
+    for (let i = 0, l = string.length; i < l; i++) {
         array[i] = string.charCodeAt(i);
      }
      return array.buffer;
