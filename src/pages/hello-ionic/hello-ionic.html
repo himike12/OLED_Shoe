@@ -19,13 +19,22 @@
 
   <br>
     
+  <h3>Display Images from Playlist:</h3>
+  <button ion-button color="primary" (click)="displayPlaylist()">Display Images</button>
+  <ion-slides class="image-slider" slidesPerView="2" loop="true">
+    <ion-item *ngFor="let img of playlist">
+        <img src="{{ img }}" class="thumb-img" imageViewer>
+    </ion-item>
+  </ion-slides>
+    
+    
   <h3>Display Images from Firebase:</h3>
   <button ion-button color="primary" (click)="display()">Display Image</button>
   <ion-slides class="image-slider" slidesPerView="2" loop="true">
     <ion-item *ngFor="let item of items">
         <img src="{{ item }}" class="thumb-img" imageViewer>
         <p>
-            <button ion-button color="primary" (click)="uploadImageToPlaylist()">Select Image</button>
+            <button ion-button color="primary" (click)="uploadImageToPlaylist(item)">Select Image</button>
         </p>
     </ion-item>
   </ion-slides>
