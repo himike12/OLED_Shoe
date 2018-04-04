@@ -86,7 +86,7 @@
       "cordova-plugin-file": {},
       "cordova-plugin-bluetooth-serial": {},
       "cordova-plugin-ble-central": {
-        "BLUETOOTH_USAGE_DESCRIPTION": " "
+        "BLUETOOTH_USAGE_DESCRIPTION": "To Connect Your Phone With Your Shoe"
       },
       "cordova-plugin-facebook4": {
         "APP_ID": "181705319094673",

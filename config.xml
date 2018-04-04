@@ -92,9 +92,6 @@
     </plugin>
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
     <plugin name="cordova-plugin-bluetooth-serial" spec="^0.4.7" />
-    <plugin name="cordova-plugin-ble-central" spec="^1.1.4">
-        <variable name="BLUETOOTH_USAGE_DESCRIPTION" value=" " />
-    </plugin>
     <plugin name="cordova-plugin-nativestorage" spec="^2.3.1" />
     <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
         <variable name="APP_ID" value="181705319094673" />
@@ -105,5 +102,8 @@
         <variable name="undefined" value="undefined" />
         <variable name="undefined" value="undefined" />
         <variable name="undefined" value="undefined" />
+    </plugin>
+    <plugin name="cordova-plugin-ble-central" spec="^1.1.4">
+        <variable name="BLUETOOTH_USAGE_DESCRIPTION" value="To Connect Your Phone With Your Shoe" />
     </plugin>
 </widget>

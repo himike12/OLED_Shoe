@@ -57,10 +57,10 @@ export class DetailPage {
   }
   alert(){
     var buffer = this.stringToBytes('2hello');
-    //this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, buffer).then(
-      //() => this.setStatus('Sent 2hello to the BLEUART'),
-     // e => this.showAlert('Unexpected Error', 'Error sending 2hello' + e)
-    //);
+    this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, buffer).then(
+      () => this.setStatus('Sent 2hello to the BLEUART'),
+      e => this.showAlert('Unexpected Error', 'Error sending 2hello' + e)
+    );
   }
   setStatus(message) {
     console.log(message);
