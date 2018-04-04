@@ -21,6 +21,8 @@ export class ItemDetailsPage {
   imageURL: string;
   alertCtrl: AlertController;
   
+  firedbRef: firebase.database.Reference = firebase.database().ref('/images');
+  
   constructor(public camera: Camera, alertCtrl: AlertController) {
     this.alertCtrl = alertCtrl;
     this.camera = camera;
@@ -43,8 +45,9 @@ export class ItemDetailsPage {
         // Create a reference to 'images/todays-date.jpeg'
         const imageRef = storageRef.child(filename);
         imageRef.putString(this.base64Image, firebase.storage.StringFormat.DATA_URL).then((snapshot) => {
-        // Show an alert when image is successfully uploaded
-        this.showSuccesfulUploadAlert();
+            this.firedbRef.push(filename);
+            // Show an alert when image is successfully uploaded
+            this.showSuccesfulUploadAlert();
         imageRef.getDownloadURL().then(function (url) {
             this.imageURL = url;
         }).then((imageURL) => {
