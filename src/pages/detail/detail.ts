@@ -57,7 +57,9 @@ export class DetailPage {
   }
   alert(){
     var buffer = this.stringToBytes('2hello');
-    this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, buffer).then(
+    var data = new Uint8Array(1);
+    data[0] = 1;
+    this.ble.write(this.peripheral.id, BLEUART_SERVICE, BLEUART_CHARACTERISTIC, data.buffer).then(
       () => this.setStatus('Sent 2hello to the BLEUART'),
       e => this.showAlert('Unexpected Error', 'Error sending 2hello' + e)
     );
