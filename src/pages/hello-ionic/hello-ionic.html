@@ -23,9 +23,9 @@
   <button ion-button color="primary" (click)="display()">Display Image</button>
   <ion-slides class="image-slider" slidesPerView="2" loop="true">
     <ion-item *ngFor="let item of items">
-        <img src="{{ items }}" class="thumb-img" imageViewer>
+        <img src="{{ item }}" class="thumb-img" imageViewer>
         <p>
-            <button ion-button color="primary" (click)="uploadImageToPlaylist()">Sekect Image</button>
+            <button ion-button color="primary" (click)="uploadImageToPlaylist()">Select Image</button>
         </p>
     </ion-item>
   </ion-slides>
