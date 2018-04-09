@@ -10,8 +10,8 @@
 #include "Adafruit_GFX.h"
 #include "PL_microEPD.h"
 
-#define EPD_RST     A0      // Please align with your individual wiring
-#define EPD_BUSY    A1      // Please align with your individual wiring
+#define EPD_RST     A4      // Please align with your individual wiring
+#define EPD_BUSY    A5      // Please align with your individual wiring
 #define EPD_CS      10
 PL_microEPD display(EPD_CS, EPD_RST, EPD_BUSY); 
 
