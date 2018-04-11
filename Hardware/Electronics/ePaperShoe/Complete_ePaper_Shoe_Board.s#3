@@ -6483,18 +6483,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <label x="187.96" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GDR_P" class="0">
-<segment>
-<wire x1="91.44" y1="121.92" x2="101.6" y2="121.92" width="0.1524" layer="91"/>
-<label x="81.28" y="121.92" size="1.778" layer="95"/>
-<pinref part="Q1" gate="PMOS" pin="G"/>
-</segment>
-<segment>
-<pinref part="X3" gate="-18" pin="1"/>
-<wire x1="208.28" y1="121.92" x2="195.58" y2="121.92" width="0.1524" layer="91"/>
-<label x="187.96" y="121.92" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <wire x1="109.22" y1="99.06" x2="109.22" y2="111.76" width="0.1524" layer="91"/>
@@ -6611,6 +6599,18 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <pinref part="X3" gate="-11" pin="1"/>
 <wire x1="208.28" y1="104.14" x2="195.58" y2="104.14" width="0.1524" layer="91"/>
 <label x="187.96" y="104.14" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GDR_P" class="0">
+<segment>
+<wire x1="91.44" y1="121.92" x2="101.6" y2="121.92" width="0.1524" layer="91"/>
+<label x="81.28" y="121.92" size="1.778" layer="95"/>
+<pinref part="Q1" gate="PMOS" pin="G"/>
+</segment>
+<segment>
+<pinref part="X3" gate="-18" pin="1"/>
+<wire x1="208.28" y1="121.92" x2="195.58" y2="121.92" width="0.1524" layer="91"/>
+<label x="187.96" y="121.92" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
