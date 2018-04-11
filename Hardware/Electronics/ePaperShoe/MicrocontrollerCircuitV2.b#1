@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -170,9 +170,9 @@
 <text x="43.18" y="32.512" size="0.6096" layer="21" rot="R180">Michael Currie</text>
 <text x="24.13" y="10.922" size="0.6096" layer="21">Microcontroller board for Bioworld ePaper project V2</text>
 <text x="13.208" y="30.48" size="0.6096" layer="21">3.3V</text>
-<text x="21.336" y="28.702" size="0.4064" layer="21" rot="SR180">3.3V</text>
+<text x="21.336" y="28.6766" size="0.4064" layer="21" rot="SR180">3.3V</text>
 <text x="13.208" y="12.7" size="0.6096" layer="21">GND</text>
-<text x="24.13" y="28.702" size="0.4064" layer="21" rot="SR180">GND</text>
+<text x="23.876" y="28.6766" size="0.4064" layer="21" rot="SR180">GND</text>
 <text x="26.924" y="28.702" size="0.4064" layer="21" rot="SR180">SWDCLK</text>
 <text x="29.464" y="28.702" size="0.4064" layer="21" rot="SR180">SWDIO</text>
 <text x="12.954" y="15.24" size="0.6096" layer="21">RST_N</text>

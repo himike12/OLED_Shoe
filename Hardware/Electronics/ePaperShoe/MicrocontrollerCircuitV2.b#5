@@ -182,6 +182,7 @@
 <text x="13.208" y="22.86" size="0.6096" layer="21">CS</text>
 <text x="13.208" y="25.4" size="0.6096" layer="21">MOSI</text>
 <text x="13.208" y="27.94" size="0.6096" layer="21">CLK</text>
+<text x="40.386" y="26.162" size="5.08" layer="22" rot="SMR270">V2</text>
 </plain>
 <libraries>
 <library name="microbuilder">

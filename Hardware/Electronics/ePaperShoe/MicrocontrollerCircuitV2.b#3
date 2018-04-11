@@ -169,7 +169,6 @@
 <wire x1="9.398" y1="32.944" x2="9.398" y2="10.668" width="0" layer="20"/>
 <text x="43.18" y="32.512" size="0.6096" layer="21" rot="R180">Michael Currie</text>
 <text x="24.13" y="10.922" size="0.6096" layer="21">Microcontroller board for Bioworld ePaper project V2</text>
-<text x="37.846" y="32.512" size="0.6096" layer="21" rot="MR180">Michael Currie</text>
 <text x="13.208" y="30.48" size="0.6096" layer="21">3.3V</text>
 <text x="21.336" y="28.702" size="0.4064" layer="21" rot="SR180">3.3V</text>
 <text x="13.208" y="12.7" size="0.6096" layer="21">GND</text>
@@ -182,7 +181,7 @@
 <text x="13.208" y="22.86" size="0.6096" layer="21">CS</text>
 <text x="13.208" y="25.4" size="0.6096" layer="21">MOSI</text>
 <text x="13.208" y="27.94" size="0.6096" layer="21">CLK</text>
-<text x="40.386" y="26.162" size="5.08" layer="22" rot="SMR270">V2</text>
+<text x="40.386" y="25.9588" size="5.08" layer="22" rot="SMR270">V2</text>
 <wire x1="33.0454" y1="31.5722" x2="41.1734" y2="31.5722" width="0.1524" layer="22"/>
 <wire x1="41.1734" y1="31.5722" x2="43.2054" y2="29.5402" width="0.1524" layer="22"/>
 <wire x1="43.2054" y1="29.5402" x2="43.2054" y2="12.0142" width="0.1524" layer="22"/>
@@ -191,6 +190,7 @@
 <wire x1="41.1734" y1="28.7782" x2="40.1574" y2="29.7942" width="0.1524" layer="22"/>
 <wire x1="40.1574" y1="29.7942" x2="33.0454" y2="29.7942" width="0.1524" layer="22"/>
 <wire x1="33.0454" y1="29.7942" x2="33.0454" y2="31.5722" width="0.1524" layer="22"/>
+<text x="43.2308" y="31.9024" size="0.6096" layer="22" rot="MR0">Michael Currie</text>
 </plain>
 <libraries>
 <library name="microbuilder">

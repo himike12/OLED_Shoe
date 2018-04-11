@@ -167,6 +167,21 @@
 <wire x1="43.922" y1="10.668" x2="43.922" y2="32.944" width="0" layer="20"/>
 <wire x1="43.922" y1="32.944" x2="9.398" y2="32.944" width="0" layer="20"/>
 <wire x1="9.398" y1="32.944" x2="9.398" y2="10.668" width="0" layer="20"/>
+<text x="43.18" y="32.512" size="0.6096" layer="21" rot="R180">Michael Currie</text>
+<text x="24.13" y="10.922" size="0.6096" layer="21">Microcontroller board for Bioworld ePaper project V2</text>
+<text x="37.846" y="32.512" size="0.6096" layer="21" rot="MR180">Michael Currie</text>
+<text x="13.208" y="30.48" size="0.6096" layer="21">3.3V</text>
+<text x="21.336" y="28.702" size="0.4064" layer="21" rot="SR180">3.3V</text>
+<text x="13.208" y="12.7" size="0.6096" layer="21">GND</text>
+<text x="24.13" y="28.702" size="0.4064" layer="21" rot="SR180">GND</text>
+<text x="26.924" y="28.702" size="0.4064" layer="21" rot="SR180">SWDCLK</text>
+<text x="29.464" y="28.702" size="0.4064" layer="21" rot="SR180">SWDIO</text>
+<text x="12.954" y="15.24" size="0.6096" layer="21">RST_N</text>
+<text x="13.208" y="17.78" size="0.6096" layer="21">BUSY_N</text>
+<text x="13.208" y="20.32" size="0.6096" layer="21">MISO</text>
+<text x="13.208" y="22.86" size="0.6096" layer="21">CS</text>
+<text x="13.208" y="25.4" size="0.6096" layer="21">MOSI</text>
+<text x="13.208" y="27.94" size="0.6096" layer="21">CLK</text>
 </plain>
 <libraries>
 <library name="microbuilder">
@@ -775,8 +790,9 @@ design rules under a new name.</description>
 <attribute name="DESIGNER" value="Nobody" x="-20.32" y="43.18" size="1.778" layer="27" display="off"/>
 <attribute name="VERSION" value="v01" x="-20.32" y="43.18" size="1.778" layer="27" display="off"/>
 </element>
-<element name="J1" library="SparkFun-Connectors" package="1X08" value="" x="11.43" y="12.954" rot="R90">
+<element name="J1" library="SparkFun-Connectors" package="1X08" value="" x="11.43" y="12.954" smashed="yes" rot="R90">
 <attribute name="PROD_ID" value="CONN-08438" x="11.43" y="12.954" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="VALUE" x="13.462" y="11.684" size="0.6096" layer="27" font="vector" ratio="20" rot="R90"/>
 </element>
 <element name="J2" library="SparkFun-Connectors" package="1X04" value="" x="28.448" y="30.734" rot="R180">
 <attribute name="PROD_ID" value="CONN-09696" x="28.448" y="30.734" size="1.778" layer="27" rot="R180" display="off"/>
