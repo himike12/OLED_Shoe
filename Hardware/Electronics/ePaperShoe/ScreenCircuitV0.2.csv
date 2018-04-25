@@ -1,0 +1,16 @@
+Added top order,Part,Value,Device,Package,Description,DESIGNER,MF,MPN,OC_FARNELL,OC_NEWARK,PACKAGE,PROD_ID,SUPPLIER,VALUE,VERSION
+y,C1,1.0uF,1.0UF-1206-50V-10%,1206,1µF ceramic capacitors,,,,,,,CAP-09822,,1.0uF,
+y,C2,1.0uF,1.0UF-1206-50V-10%,1206,1µF ceramic capacitors,,,,,,,CAP-09822,,1.0uF,
+y,C3,1.0uF,1.0UF-1206-50V-10%,1206,1µF ceramic capacitors,,,,,,,CAP-09822,,1.0uF,
+y,C4,1.0uF,1.0UF-1206-50V-10%,1206,1µF ceramic capacitors,,,,,,,CAP-09822,,1.0uF,
+y,C5,0.1uF,0.1UF-0603-100V-10%,603,0.1µF ceramic capacitors,,,,,,,CAP-08390,,0.1uF,
+y,C6,4.7uF,4.7UF-1206-16V-(+80/-20%),1206,4.7µF ceramic capacitors,,,,,,,CAP-10300,,4.7uF,
+y,C7,4.7uF,4.7UF-1206-16V-(+80/-20%),1206,4.7µF ceramic capacitors,,,,,,,CAP-10300,,4.7uF,
+y,D3,0.5A/40V/420mV,DIODE-SCHOTTKY-PMEG4005EJ,SOD-323,Schottky diode,,,,,,,DIO-10955,,0.5A/40V/420mV,
+y,D4,0.5A/40V/420mV,DIODE-SCHOTTKY-PMEG4005EJ,SOD-323,Schottky diode,,,,,,,DIO-10955,,0.5A/40V/420mV,
+n/a,FRAME1,FRAME-LETTER-MICHAELNO_PACKAGE,FRAME-LETTER-MICHAELNO_PACKAGE,DUMMY,Schematic Frame - Letter,Nobody,,,,,,,,,v01
+y,J1,,"CONN_08"";""1X08",Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections,,,,,,,CONN-08438,,,,
+y,L1,47µH/±30%/750mA,INDUCTOR-CR54-47UH,CR54,Inductors,,,,,,,NDUC-10789,,47µH/±30%/750mA,
+y,Q1,IRF7509,IRF7509,MSOP8,Dual N and P Channel MOSFET,,,,,,,TRANS-07913,,,
+y,U1,XF2J-2624-11A,XF2J-2624-11A,OMRON_XF2J-2624-11A,"FFC/FPC CONNECTOR, RECEPTACLE 26POS 1ROW",,,XF2J-2624-11A,-,05M1981,"FFC/FPC CONNECTOR, RECEPTACLE 26POS 1ROW",,OMRON ELECTRONIC COMPONENTS,,
+y,X1,FH12-26S-0.5SH,FH12-26S-0.5SH,FH12-26S-0.5SH,0.5mm Pitch Connectors For FPC/FFC,,,FH12-26S-0.5SH(55),1324553,34M6172,,,,,

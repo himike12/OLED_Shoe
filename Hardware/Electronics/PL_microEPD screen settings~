@@ -1,0 +1,10 @@
+Screen settings for the PL_microEPD library
+
+3.1" display (wide)
+#define EPD_WIDTH   (312)
+#define EPD_HEIGHT  (74)
+
+
+2.1" display
+#define EPD_WIDTH   (240)
+#define EPD_HEIGHT  (146)

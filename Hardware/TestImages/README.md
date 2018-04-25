@@ -1,0 +1,1 @@
+All of the images except for the Bioworld Logo are copyright Michael Currie 2018
