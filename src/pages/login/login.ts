@@ -18,7 +18,7 @@ export class LoginPage {
     public nativeStorage: NativeStorage,
     private alertCtrl: AlertController
   ) {
-    this.fb.browserInit(this.FB_APP_ID, "v2.8");
+    //this.fb.browserInit(this.FB_APP_ID, "v2.8");
   }
 
   doFbLogin() {
