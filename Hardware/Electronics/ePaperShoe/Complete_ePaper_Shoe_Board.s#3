@@ -6601,7 +6601,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <label x="187.96" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GDR_P" class="0">
+<net name="GDR" class="0">
 <segment>
 <wire x1="91.44" y1="121.92" x2="101.6" y2="121.92" width="0.1524" layer="91"/>
 <label x="81.28" y="121.92" size="1.778" layer="95"/>

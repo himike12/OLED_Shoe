@@ -5077,6 +5077,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <pinref part="GND9" gate="1" pin="GND"/>
 <wire x1="195.58" y1="91.44" x2="203.2" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="91.44" x2="203.2" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="J5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="VBAT" class="0">

@@ -1395,6 +1395,7 @@ design rules under a new name.</description>
 <wire x1="28.231" y1="9.973" x2="28.4577125" y2="9.973" width="0.1524" layer="1"/>
 <wire x1="28.4577125" y1="9.973" x2="29.1113125" y2="9.3194" width="0.1524" layer="1"/>
 <via x="29.464" y="6.096" extent="1-16" drill="0.35"/>
+<contactref element="J5" pad="1"/>
 <wire x1="27.108" y1="16.002" x2="26.67" y2="16.51" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="VBAT">

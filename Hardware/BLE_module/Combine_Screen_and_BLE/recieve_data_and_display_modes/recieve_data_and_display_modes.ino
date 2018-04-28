@@ -4,15 +4,15 @@
 #include <BLEPeripheral.h>
 #include "BLESerial.h"
 
-#define VERSION_NUMBER 1.0
+#define VERSION_NUMBER 1.1
 
 #define EPD_RST     A4      // Please align with your individual wiring
-#define EPD_BUSY    A5      // Please align with your individual wiring
+#define EPD_BUSY    A5      // 5 3 Please align with your individual wiring
 #define EPD_CS      10
 PL_microEPD display(EPD_CS, EPD_RST, EPD_BUSY); 
-int i=0;
-int led = 6;
-int led2 = 7;
+int i=0;  
+int led = 0; // 6 0
+//int led2 = 7;
 
 // define pins (varies per shield/board)
 #define BLE_REQ   10
@@ -32,9 +32,9 @@ void setup() {
     SPI.beginTransaction(SPISettings(500000, MSBFIRST, SPI_MODE0));//and 6.6Mhz (reading)
 
     pinMode(led, OUTPUT);   
-    pinMode(led2, OUTPUT);
+    //pinMode(led2, OUTPUT);
     digitalWrite(led, HIGH); 
-    digitalWrite(led2, HIGH); 
+    //digitalWrite(led2, HIGH); 
 
     // Mark the begining of the program by flashing an LED
     digitalWrite(led, LOW);
@@ -56,11 +56,17 @@ void setup() {
     display.drawBitmap(0, 0, BioworldLogo, 312, 74, EPD_BLACK);
     // Trigger a full image update
     display.update();
-    
+
+    digitalWrite(led, LOW);
+    delay(500); 
+    digitalWrite(led, HIGH);
+    delay(500); 
+    digitalWrite(led, LOW);
+    delay(200); 
     
     // Start the bluetooth service
     // custom services and characteristics can be added as well
-    BLESerial.setLocalName("UART");
+    BLESerial.setLocalName("ePaper_Shoe");
     BLESerial.begin();
 
     // Mark the end of the boot by turning off the LED
@@ -78,7 +84,7 @@ void loop() {
 // Returns the data recieved from bluetooth as a string
 void getBluetoothData() {
 
-    digitalWrite(led2, LOW);
+    //digitalWrite(led2, LOW);
     
     // Get data from bluetooth
     if (BLESerial) {
@@ -89,7 +95,7 @@ void getBluetoothData() {
             recievedLine += (char)byte;
             // If newline character, return the string
             if((char)byte == '\n') {
-                digitalWrite(led2, HIGH);
+                //digitalWrite(led2, HIGH);
                 selectMode();
             }
         }
