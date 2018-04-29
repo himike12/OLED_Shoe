@@ -1,29 +1,24 @@
+import { BLE } from '@ionic-native/ble';
 import { Component, NgZone } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
-import { BLE } from '@ionic-native/ble';
 import { DetailPage } from '../detail/detail';
-
-/**
- * Generated class for the BluetoothConnectionPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-bluetooth-connection',
-  templateUrl: 'bluetooth-connection.html',
+  templateUrl: 'bluetooth-connection.html'
 })
 export class BluetoothConnectionPage {
+  
   devices: any[] = [];
   statusMessage: string;
+
   constructor(public navCtrl: NavController, 
-    private toastCtrl: ToastController,
-    private ble: BLE,
-    private ngZone: NgZone) {
-    
+              private toastCtrl: ToastController,
+              private ble: BLE,
+              private ngZone: NgZone) { 
   }
+
   ionViewDidEnter() {
     console.log('ionViewDidEnter');
     this.scan();
