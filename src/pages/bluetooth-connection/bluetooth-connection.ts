@@ -21,6 +21,7 @@ export class BluetoothConnectionPage {
 
   ionViewDidEnter() {
     console.log('ionViewDidEnter');
+    this.ble.enable();
     this.scan();
   }
 
